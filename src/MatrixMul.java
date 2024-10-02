@@ -76,12 +76,12 @@ public class MatrixMul {
                     val = in.nextInt();
 
                     // Validate the input against the specified bounds
-                    if (val <lower || val > upper) System.out.printf("[!]Please enter between %d and %d\n",lower,upper);
+                    if (val <lower || val > upper) System.out.printf("[!] Please enter between %d and %d\n",lower,upper);
                     else done = true;
                 }
                 else // Invalid input
                 {
-                    System.out.println("[!]Please enter an integer");
+                    System.out.println("[!] Please enter an integer");
                     in.next();
                 }
             }
@@ -92,12 +92,12 @@ public class MatrixMul {
                     val = in.nextInt();
 
                     // Validate against the lower bound
-                    if (val < lower) System.out.printf("[!]Please enter %d or above\n",lower);
+                    if (val < lower) System.out.printf("[!] Please enter %d or above\n",lower);
                     else done = true;
                 }
                 else
                 {
-                    System.out.println("[!]Please enter an integer");
+                    System.out.println("[!] Please enter an integer");
                     in.next();
                 }
             }
