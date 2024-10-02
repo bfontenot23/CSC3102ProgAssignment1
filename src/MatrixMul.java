@@ -108,8 +108,25 @@ public class MatrixMul {
 
     public static void main(String[] args) {
 
-        System.out.print("Enter the size of the matrices: ");
-        int size = inputRange(0, Integer.MAX_VALUE);
+        int size=0;
+        String confirm = "";
+        boolean done = false;
+
+        // set the size variable >0
+        do
+        {
+            System.out.print("Enter the size of the matrices: ");
+            size = inputRange(0, Integer.MAX_VALUE);
+
+            if(size >= 1000) // edge case warning
+            {
+                System.out.println("[!] The inputted value (" + size + ") is very large and may cause\nexcessive memory usage, long calculation times, and/or may produce\na result that will cause a crash due to exceeding the integer limit.  \n\nWould you still like to proceed? (Y/N): ");
+                confirm = in.next();
+                if(confirm.toLowerCase().contains("y")) done = true;
+            }
+            else done = true;
+        } while(!done);
+
 
         RandMatrix matrixLeft = new RandMatrix(size);
         RandMatrix matrixRight = new RandMatrix(size);
